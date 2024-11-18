@@ -21,6 +21,7 @@
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
+    "mini-css-extract-plugin": "^2.9.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",

@@ -14,8 +14,6 @@ class Search extends React.Component {
         </div>;
     }
 }
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(
-    <Search />,
-    document.getElementById('root')
-);
+root.render(<Search />);

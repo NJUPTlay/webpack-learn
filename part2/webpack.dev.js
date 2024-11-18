@@ -23,7 +23,11 @@ module.exports = {
                 test: /.css$/,
                 use: [
                     'style-loader',
-                    'css-loader' //将css转为js对象后 再引入js
+                    //以<style>>标签插入当前html文件的<head>标签中
+                    'css-loader' 
+                    //css-loader会解析@import和url()等语言,将css文件转为js模块
+
+                    //实际就是将css文件打包为js模块,style-loader会解析js模块中的css代码,并插入到html文件中
                 ]
             },
             {
