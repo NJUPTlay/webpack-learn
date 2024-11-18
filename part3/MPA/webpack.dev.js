@@ -101,5 +101,6 @@ module.exports = {
             directory: path.resolve(__dirname, 'dist'), // 指定静态文件路径
         },
         hot: true,
-    }
+    },
+    devtool:'source-map'
 }

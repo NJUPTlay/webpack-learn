@@ -1,10 +1,8 @@
-'use strict';
-
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import logo from './images/logo.jpg';
 import './index.less';
+import { test } from '../common/test';
 
+test()
 
 class Search extends React.Component {
 
@@ -14,6 +12,7 @@ class Search extends React.Component {
         </div>;
     }
 }
+//这里需要注意react bandler的版本问题，如果使用的是react18，那么需要使用createRoot方法
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<Search />);

@@ -45,6 +45,11 @@ const setMPA = () => {
 const { entry, htmlWebpackPlugins } = setMPA();
 
 module.exports = {
+    //标记这些不要打包的外部依赖 后续通过cdn引入
+    externals:{
+        react:'React',
+        'react-dom': 'ReactDOM'
+    },
     entry:entry,
     output:{
         path:path.resolve(__dirname,'dist'),
@@ -114,4 +119,16 @@ module.exports = {
         }),
         new CleanWebpackPlugin()
     ].concat(htmlWebpackPlugins),
+    optimization:{
+        splitChunks:{
+            minSize:0,
+            cacheGroups:{
+                commons:{
+                    name:'commons',
+                    chunks:'all',
+                    minChunks:2
+                }
+            }
+        }
+    }
 }
